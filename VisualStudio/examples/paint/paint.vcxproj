@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{99D31D0C-764A-4832-BA78-B563400A2684}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>paint</RootNamespace>
+    <ProjectName>paint</ProjectName>
+    <PortType>gbz80</PortType>
+    <BuildFormat>Binary</BuildFormat>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)SDCC/SDCC.Common.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir)\examples\$(ProjectName)\obj</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(SolutionDir)\examples\$(ProjectName)\obj</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PostBuildEvent>
+      <Command>copy /y "$(OutDir)$(TargetName)$(Extension)" "$(SolutionDir)examples\$(ProjectName)\$(TargetName)$(Extension)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PostBuildEvent>
+      <Command>copy /y "$(OutDir)$(TargetName)$(Extension)" "$(SolutionDir)examples\$(ProjectName)\$(TargetName)$(Extension)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\examples\paint\paint.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)SDCC/SDCC.Common.targets" />
+</Project>

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;s</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AsmCompile Include="..\..\libc\arand.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\cgb.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\cpy_data.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\crt0.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\delay.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\drawing.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\f_ibm_sh.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\f_italic.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\f_min.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\f_spect.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\font.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\get_bk_t.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\get_data.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\get_prop.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\get_spr.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\get_wi_t.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\get_xy_t.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\global.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\hiramcpy.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\ibmfixed.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\init_tt.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\input.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\mv_bkg.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\mv_spr.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\mv_win.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\pad.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\rand.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\sample.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\scroll_b.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\scroll_s.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\scroll_w.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\serial.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\set_bk_t.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\set_data.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\set_prop.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\set_spr.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\set_wi_t.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\set_xy_t.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\sfr.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+    <AsmCompile Include="..\..\libc\sgb.s">
+      <Filter>Source Files</Filter>
+    </AsmCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\libc\digits.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libc\gprint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libc\gprintf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libc\gprintln.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libc\gprintn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\libc\stubs.rasm">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{4F75FD55-CE71-44C6-9F78-3234A3C71044}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gb</RootNamespace>
+    <ProjectName>gb</ProjectName>
+    <PortType>gbz80</PortType>
+    <BuildFormat>Library</BuildFormat>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <GBDKSupported>false</GBDKSupported>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <GBDKSupported>false</GBDKSupported>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)SDCC/SDCC.Common.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)lib\</OutDir>
+    <AdditionalIncludeDirectories>$(SolutionDir)include;$(SolutionDir)include\asm;$(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    <IntDir>$(SolutionDir)\obj</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)lib\</OutDir>
+    <AdditionalIncludeDirectories>$(SolutionDir)include;$(SolutionDir)include\asm;$(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    <IntDir>$(SolutionDir)\obj</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PostBuildEvent>
+      <Command>copy /y $(IntDir)crt0.rel $(OutDir)crt0.rel</Command>
+    </PostBuildEvent>
+    <AsmCompile>
+      <EnableSDCCDebugSymbols>false</EnableSDCCDebugSymbols>
+    </AsmCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PostBuildEvent>
+      <Command>copy /y $(IntDir)crt0.rel $(OutDir)crt0.rel</Command>
+    </PostBuildEvent>
+    <AsmCompile>
+      <EnableSDCCDebugSymbols>false</EnableSDCCDebugSymbols>
+    </AsmCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <AsmCompile Include="..\..\libc\arand.s" />
+    <AsmCompile Include="..\..\libc\cgb.s" />
+    <AsmCompile Include="..\..\libc\cpy_data.s" />
+    <AsmCompile Include="..\..\libc\crt0.s" />
+    <AsmCompile Include="..\..\libc\delay.s" />
+    <AsmCompile Include="..\..\libc\drawing.s" />
+    <AsmCompile Include="..\..\libc\font.s" />
+    <AsmCompile Include="..\..\libc\f_ibm_sh.s" />
+    <AsmCompile Include="..\..\libc\f_italic.s" />
+    <AsmCompile Include="..\..\libc\f_min.s" />
+    <AsmCompile Include="..\..\libc\f_spect.s" />
+    <AsmCompile Include="..\..\libc\get_bk_t.s" />
+    <AsmCompile Include="..\..\libc\get_data.s" />
+    <AsmCompile Include="..\..\libc\get_prop.s" />
+    <AsmCompile Include="..\..\libc\get_spr.s" />
+    <AsmCompile Include="..\..\libc\get_wi_t.s" />
+    <AsmCompile Include="..\..\libc\get_xy_t.s" />
+    <AsmCompile Include="..\..\libc\global.s" />
+    <AsmCompile Include="..\..\libc\hiramcpy.s" />
+    <AsmCompile Include="..\..\libc\ibmfixed.s" />
+    <AsmCompile Include="..\..\libc\init_tt.s" />
+    <AsmCompile Include="..\..\libc\input.s" />
+    <AsmCompile Include="..\..\libc\mv_bkg.s" />
+    <AsmCompile Include="..\..\libc\mv_spr.s" />
+    <AsmCompile Include="..\..\libc\mv_win.s" />
+    <AsmCompile Include="..\..\libc\pad.s" />
+    <AsmCompile Include="..\..\libc\rand.s" />
+    <AsmCompile Include="..\..\libc\sample.s" />
+    <AsmCompile Include="..\..\libc\scroll_b.s" />
+    <AsmCompile Include="..\..\libc\scroll_s.s" />
+    <AsmCompile Include="..\..\libc\scroll_w.s" />
+    <AsmCompile Include="..\..\libc\serial.s" />
+    <AsmCompile Include="..\..\libc\set_bk_t.s" />
+    <AsmCompile Include="..\..\libc\set_data.s" />
+    <AsmCompile Include="..\..\libc\set_prop.s" />
+    <AsmCompile Include="..\..\libc\set_spr.s" />
+    <AsmCompile Include="..\..\libc\set_wi_t.s" />
+    <AsmCompile Include="..\..\libc\set_xy_t.s" />
+    <AsmCompile Include="..\..\libc\sfr.s" />
+    <AsmCompile Include="..\..\libc\sgb.s" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\libc\digits.c" />
+    <ClCompile Include="..\..\libc\gprint.c" />
+    <ClCompile Include="..\..\libc\gprintf.c" />
+    <ClCompile Include="..\..\libc\gprintln.c" />
+    <ClCompile Include="..\..\libc\gprintn.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\libc\stubs.rasm" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)SDCC/SDCC.Common.targets" />
+</Project>
