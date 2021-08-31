@@ -26,7 +26,7 @@
   <PropertyGroup Label="Globals" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <GBDKSupported>false</GBDKSupported>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)SDCC/SDCC.Common.props" />
+  <Import Project="$(MSBuildExtensionsPath)\SDCC\SDCC.Common.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)lib\</OutDir>
     <AdditionalIncludeDirectories>$(SolutionDir)include;$(SolutionDir)include\asm;$(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -105,5 +105,5 @@
   <ItemGroup>
     <None Include="..\..\libc\stubs.rasm" />
   </ItemGroup>
-  <Import Project="$(VCTargetsPath)SDCC/SDCC.Common.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\SDCC\SDCC.Common.targets" />
 </Project>
